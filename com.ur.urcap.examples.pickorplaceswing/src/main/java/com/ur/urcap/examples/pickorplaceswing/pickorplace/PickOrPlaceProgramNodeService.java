@@ -1,7 +1,5 @@
 package com.ur.urcap.examples.pickorplaceswing.pickorplace;
 
-import java.util.Locale;
-
 import com.ur.urcap.api.contribution.ViewAPIProvider;
 import com.ur.urcap.api.contribution.program.ContributionConfiguration;
 import com.ur.urcap.api.contribution.program.CreationContext;
@@ -9,6 +7,8 @@ import com.ur.urcap.api.contribution.program.ProgramAPIProvider;
 import com.ur.urcap.api.contribution.program.swing.SwingProgramNodeService;
 import com.ur.urcap.api.domain.SystemAPI;
 import com.ur.urcap.api.domain.data.DataModel;
+
+import java.util.Locale;
 
 public class PickOrPlaceProgramNodeService
 		implements SwingProgramNodeService<PickOrPlaceProgramNodeContribution, PickOrPlaceProgramNodeView> {
@@ -20,7 +20,7 @@ public class PickOrPlaceProgramNodeService
 
 	@Override
 	public String getTitle(Locale locale) {
-		return "Pick or Place Swing";
+		return "Pick or Place";
 	}
 
 	@Override

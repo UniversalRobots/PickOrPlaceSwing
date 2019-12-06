@@ -104,22 +104,16 @@ public class PickOrPlaceProgramNodeContribution implements ProgramNodeContributi
 		ProgramAPI programAPI = apiProvider.getProgramAPI();
 		ProgramModel programModel = programAPI.getProgramModel();
 
-		TreeNode tree = programModel.getRootTreeNode(this);
-		int size = childrenCount();
+		TreeNode subTree = programModel.getRootTreeNode(this);
+
 		try {
-			for (int i = 0; i < size; i++) {
-				tree.removeChild(tree.getChildren().get(0));
+			for (TreeNode child : subTree.getChildren()) {
+				subTree.removeChild(child);
 			}
 		} catch (TreeStructureException e) {
 			e.printStackTrace();
 			// See e.getMessage() for explanation
 		}
-	}
-
-	private int childrenCount() {
-		ProgramAPI programAPI = apiProvider.getProgramAPI();
-		ProgramModel programModel = programAPI.getProgramModel();
-		return programModel.getRootTreeNode(this).getChildren().size();
 	}
 
 	private void createSubtree(TemplateType template) {
@@ -159,5 +153,4 @@ public class PickOrPlaceProgramNodeContribution implements ProgramNodeContributi
 		TreeNode root = programModel.getRootTreeNode(this);
 		root.setChildSequenceLocked(true);
 	}
-
 }

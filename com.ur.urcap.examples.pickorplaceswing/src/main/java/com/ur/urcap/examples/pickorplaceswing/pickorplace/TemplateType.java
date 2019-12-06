@@ -2,7 +2,7 @@ package com.ur.urcap.examples.pickorplaceswing.pickorplace;
 
 public enum TemplateType {
 
-	EMPTY("Pick or Place Swing"), PICK("Pick"), PLACE("Place");
+	EMPTY("Pick or Place"), PICK("Pick"), PLACE("Place");
 
 	private final String name;
 
